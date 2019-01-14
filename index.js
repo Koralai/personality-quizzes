@@ -5,6 +5,8 @@ const quizForm = document.querySelector("#quiz-form");
 quizForm.addEventListener("submit", function(event){
   event.preventDefault(); // Prevents automatic reloading of the page caused by the submit event
 
+  // Calculate the quiz-taker's total score
+
   const numOfQuestions = 10;
   let totalScore = 0;
   let currentQuestion = "";
@@ -16,8 +18,10 @@ quizForm.addEventListener("submit", function(event){
   
   //Hide the form and show results
   this.classList.toggle("hidden");
-  selectResultMessage(totalScore).classList.toggle("hidden");
 
+  const finalMessage = selectResultMessage(totalScore);
+  finalMessage.classList.toggle("hidden");
+  finalMessage.classList.toggle("animate-fadein");
 });
 
 

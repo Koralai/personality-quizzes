@@ -2,11 +2,11 @@ body {
   font-family: "Helvetica", sans-serif;
 }
 
-/* #result-1, #result-2, #result-3 {
-  opacity: 0;
+.animate-fadein {
+  opacity: 1;
   animation-name: fadein;
-  animation-duration: 2s;
-} */
+  animation-duration: 1.2s;
+}
 
 .hidden {
   display: none;
