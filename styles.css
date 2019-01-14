@@ -1,3 +1,22 @@
 body {
   font-family: "Helvetica", sans-serif;
 }
+
+/* #result-1, #result-2, #result-3 {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 2s;
+} */
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

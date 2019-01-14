@@ -5,13 +5,18 @@ const quizForm = document.querySelector("#quiz-form");
 quizForm.addEventListener("submit", function(event){
   event.preventDefault(); // Prevents automatic reloading of the page caused by the submit event
 
-  const question1 = document.querySelectorAll(".first-question");
-  const question2 = document.querySelectorAll(".second-question");
+  const numOfQuestions = 10;
+  let totalScore = 0;
+  let currentQuestion = "";
 
-  const totalScore = scoreQuestion(question1) + scoreQuestion(question2);
-
-  const quizResults = document.querySelector("#quiz-results");
-  quizResults.textContent = "Your score is: " + totalScore;
+  for (let n = 1; n <= numOfQuestions; n++) {
+    currentQuestion = document.querySelectorAll(".question-" + n); //Generates the selector for each question
+    totalScore += scoreQuestion(currentQuestion);
+  }
+  
+  //Hide the form and show results
+  this.classList.toggle("hidden");
+  selectResultMessage(totalScore).classList.toggle("hidden");
 
 });
 
@@ -27,5 +32,17 @@ function scoreQuestion(radioBtnArray) {
     return 3;
   } else {
     return 0;
+  }
+}
+
+// Find the selector for the result message:
+
+function selectResultMessage(score) {
+  if (score <= 16) {
+    return document.querySelector("#result-1");
+  } else if (score >= 17 && score <= 23) {
+    return document.querySelector("#result-2");
+  } else {
+    return document.querySelector("#result-3");
   }
 }
