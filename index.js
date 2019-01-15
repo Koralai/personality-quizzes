@@ -7,19 +7,19 @@ quizForm.addEventListener("submit", function(event){
 
   // Calculate the quiz-taker's total score
 
-  const numOfQuestions = 10;
+  const numOfQuestions = document.querySelectorAll(".question").length;
   let totalScore = 0;
   let currentQuestion = "";
 
   for (let n = 1; n <= numOfQuestions; n++) {
-    currentQuestion = document.querySelectorAll(".question-" + n); //Generates the selector for each question
+    currentQuestion = document.querySelectorAll(".question-" + n); //Generates the selector for each question, based on class names in the HTML.
     totalScore += scoreQuestion(currentQuestion);
   }
   
   //Hide the form and show results
   this.classList.toggle("hidden");
 
-  const finalMessage = selectResultMessage(totalScore);
+  const finalMessage = selectResultMessage(totalScore, numOfQuestions);
   finalMessage.classList.toggle("hidden");
   finalMessage.classList.toggle("animate-fadein");
 });
@@ -39,12 +39,23 @@ function scoreQuestion(radioBtnArray) {
   }
 }
 
-// Find the selector for the result message:
+// Divide the potential score range into 3 levels and find the DOM selector for the user's result:
 
-function selectResultMessage(score) {
-  if (score <= 16) {
+function selectResultMessage(score, numberOfQuestions) {
+  
+  const minScore = 1 * numberOfQuestions;
+  const maxScore = 3 * numberOfQuestions;
+  const resultInterval = Math.floor((maxScore - minScore) / 3);
+  
+
+  // Use two values as dividers to separate the score range into three levels. Here I used the ceiling of level 1 and the floor of level 3.
+
+  const ceilLevel1 = minScore + resultInterval; 
+  const floorLevel3 = maxScore - resultInterval;
+
+  if (score <= ceilLevel1) {
     return document.querySelector("#result-1");
-  } else if (score >= 17 && score <= 23) {
+  } else if (score > ceilLevel1 && score < floorLevel3) {
     return document.querySelector("#result-2");
   } else {
     return document.querySelector("#result-3");
