@@ -1,8 +1,10 @@
 /* General styling */
 
 body {
-  font-family: "Helvetica", sans-serif;
   box-sizing: border-box;
+  color: #111;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
   padding: 0;
   margin: 0;
   line-height: 1.6;
@@ -38,13 +40,8 @@ body {
 
 /* Results section */
 
-#quiz-results {
-  display: flex;
-  justify-content: center;
-}
-
 .result {    
-  flex-basis: 500px;
+  flex-basis: 550px;
   text-align: center;
   margin-top: 3rem;
   padding: 16px;
