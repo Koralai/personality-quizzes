@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Are you addicted to your smartphone?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+
+<body>
+
+
+  <!-- Header section -->
+
+  <header>
+    <h1>Are you addicted to your cell phone?</h1>
+    <h2>Be honest.</h2>
+  </header>
+
+
+  <!-- Quiz questions -->
+
+  <form id="quiz-form">
+
+    <h3 class="question">You lock your front door and are about to head to a movie when you realize you left your phone inside. What do you do?</h3>
+    <input type="radio" name="question1" class="question-1" required>Leave it. I’ll be okay without it for a few hours.<br>
+    <input type="radio" name="question1" class="question-1">Run in and get it. Good thing I remembered!<br>
+    <input type="radio" name="question1" class="question-1">Wouldn’t happen. I never forget my phone.<br>
+
+    <h3 class="question">When’s the last time you checked a notification on your phone (besides a calendar appointment or text)?</h3>
+    <input type="radio" name="question2" class="question-2" required>I’ve turned off most notifications.<br>
+    <input type="radio" name="question2" class="question-2">Sometime within the last few hours.<br>
+    <input type="radio" name="question2" class="question-2">Within the last 5 minutes.<br>
+
+    <h3 class="question">Do you text and drive?</h3>
+    <input type="radio" name="question3" class="question-3" required>Never.<br>
+    <input type="radio" name="question3" class="question-3">Maybe, but only at stoplights! <br>
+    <input type="radio" name="question3" class="question-3">Yes, on the freeway.<br>
+
+    <h3 class="question">The first snow of the season is winding down outside, and the dog needs a walk. You’ve got your keys, dog leash, and winter gear. Anything else you need?</h3>
+    <input type="radio" name="question4" class="question-4" required>Nope. Time to enjoy the snow!<br>
+    <input type="radio" name="question4" class="question-4">I’ll bring my phone, just in case someone needs me.<br>
+    <input type="radio" name="question4" class="question-4">I’ll bring my phone so I have something to look at during the walk.<br>
+
+    <h3 class="question">Have you ever heard a ping and thought you got a notification, only to check your phone and realize you’d imagined it?</h3>
+    <input type="radio" name="question5" class="question-5" required>No.<br>
+    <input type="radio" name="question5" class="question-5">That’s happened a few times.<br>
+    <input type="radio" name="question5" class="question-5">That happens all the time.<br>
+
+    <h3 class="question">Let’s say you’re out to lunch with a new acquaintance. At what point do you take out your phone?</h3>
+    <input type="radio" name="question6" class="question-6" required>Not until we’ve said goodbye and I’m on my way home. I want to give her my full attention.<br>
+    <input type="radio" name="question6" class="question-6">I might take it out if she goes to the bathroom, just to have something to do while I wait.<br>
+    <input type="radio" name="question6" class="question-6">It’s on the table next to me, and I start checking my apps while she’s looking over the menu. <br>
+
+    <h3 class="question">Can you remember the last time you got absorbed in something for an hour or more without thinking about your phone?</h3>
+    <input type="radio" name="question7" class="question-7" required>Sure, that happened within the past 24 hours.<br>
+    <input type="radio" name="question7" class="question-7">That happened within the past week.<br>
+    <input type="radio" name="question7" class="question-7">Not really…<br>
+
+    <h3 class="question">When’s the last time you scrolled through something on your phone while a friend or loved one was talking to you?</h3>
+    <input type="radio" name="question8" class="question-8" required>More than a week ago.<br>
+    <input type="radio" name="question8" class="question-8">Within the past week.<br>
+    <input type="radio" name="question8" class="question-8">Earlier today.<br>
+
+    <h3 class="question">Your phone broke, and you won’t get a replacement until tomorrow at the earliest. How do you feel?</h3>
+    <input type="radio" name="question9" class="question-9" required>Fine.<br>
+    <input type="radio" name="question9" class="question-9">A little jittery.<br>
+    <input type="radio" name="question9" class="question-9">Gotta keep my apps open on my laptop so I don’t miss anything.<br>
+
+    <h3 class="question">You’re at home, about to fall asleep. Where’s your phone?</h3>
+    <input type="radio" name="question10" class="question-10" required>In some other room.<br>
+    <input type="radio" name="question10" class="question-10">On my nightstand.<br>
+    <input type="radio" name="question10" class="question-10">Next to me in bed.<br>
+
+    <input type="submit">
+  </form>
+
+
+  <!-- Hidden result messages -->
+
+  <div id="#quiz-results">
+
+    <div id="result-1" class="hidden">
+      <h4>Straightedge</h4>
+      <p>
+        Kudos: you know how to protect yourself from addictive design patterns in modern tech. You may even have the
+        most straightedge accessory of all: a dumb phone.
+      </p>
+    </div>
+    <div id="result-2" class="hidden">
+      <h4>User</h4>
+      <p>
+        Sure, you can get a little distracted by your phone, but it’s not like it impedes your ability to function. You
+        could cut back anytime you want; you just don’t want to right now. Or maybe ever.
+      </p>
+    </div>
+    <div id="result-3" class="hidden">
+      <h4>Junkie</h4>
+      <p>
+        You’re the owner and the phone is your instrument, right? Of course, absolutely, and you’re prepared to defend
+        yourself because—<em>PING!</em>—hold that thought, you’ve got to check your messages…
+      </p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
