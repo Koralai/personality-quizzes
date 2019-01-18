@@ -1,6 +1,57 @@
+/* General styling */
+
 body {
   font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: center; 
+}
+
+
+/* Header section */
+
+.header-content {
+  flex-basis: 800px;
+  margin-top: 2rem;
+  padding: 28px 28px 0;
+  text-align: center;
+}
+
+
+/* Main section */
+
+.main-content {
+  flex-basis: 800px;
+  padding: 0 28px 28px;
+}
+
+.question {
+  margin-top: 2.5rem;
+}
+
+
+/* Results section */
+
+#quiz-results {
+  display: flex;
+  justify-content: center;
+}
+
+.result {    
+  flex-basis: 500px;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 16px;
+}
+
+
+/* Animation-related styling */
 
 .animate-fadein {
   animation-name: fadein;
