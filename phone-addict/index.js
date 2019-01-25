@@ -1,8 +1,6 @@
-const quizForm = document.querySelector("#quiz-form");
-
-
 //Add an event listener to run this function on submit:
 
+const quizForm = document.querySelector("#quiz-form");
 quizForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevents automatic reloading of the page caused by the submit event
 
@@ -26,7 +24,6 @@ quizForm.addEventListener("submit", function (event) {
   finalMessage.classList.toggle("hidden");
   finalMessage.classList.toggle("animate-fadein");
 });
-
 
 
 //The scoring process will be the same for every question (first answer always worth the same amount, etc.):
