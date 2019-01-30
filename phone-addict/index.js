@@ -15,14 +15,23 @@ quizForm.addEventListener("submit", function (event) {
     totalScore += scoreQuestion(currentQuestion);
   }
 
-  //Hide the header and form, show the result message
+  //Hide the header, form content, and form container; show the result message
 
   document.querySelector("header").classList.toggle("hidden");
+  document.querySelector(".main-content").classList.toggle("hidden");
   this.classList.toggle("hidden");
 
   const finalMessage = selectResultMessage(totalScore, numOfQuestions);
   finalMessage.classList.toggle("hidden");
   finalMessage.classList.toggle("animate-fadein");
+
+
+  // Find the retake button and add its functionality (refresh, scroll to top) - this doesn't work yet...
+
+  document.querySelector(".retake-btn").addEventListener("click", function(){
+    location.reload();
+    window.scrollTo(0,0);
+  });
 });
 
 

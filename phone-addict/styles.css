@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #ededed;
+  background-color: #68868c;
   box-sizing: border-box;
   color: #212121;
   font-size: 1.2rem;
@@ -46,6 +46,10 @@ header {
 
 /* Main section */
 
+main {
+  background-color: #ededed;
+}
+
 .main-content {
   flex-basis: 800px;
   padding: 20px;
@@ -65,6 +69,7 @@ input[type=radio] {
 
 label:hover {
   color: #68868c;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + label {
@@ -84,9 +89,10 @@ input[type="radio"]:checked + label {
   box-shadow: 0 3px rgba(64, 85, 89, 0.6);
 }
 
-.submit-btn:hover {
+.submit-btn:hover, .retake-btn:hover {
   background-color: rgba(104, 134, 140, 0.5);
   box-shadow: 0 3px rgba(64, 85, 89, 0.8);
+  cursor: pointer;
 }
 
 
@@ -102,11 +108,46 @@ footer {
 
 /* Results section */
 
+#result-1, #result-2, #result-3 {
+  padding-top: 5%;
+}
+
 .result {    
   flex-basis: 550px;
   text-align: center;
-  margin-top: 3rem;
   padding: 16px;
+}
+
+.result-title {
+  padding: 0 5%;
+  text-align: center;
+}
+
+.result-title h2 {
+  font-weight: 400;
+}
+
+.result-contrast-text {
+  color: #68868c;
+  font-size: 150%;
+  font-weight: 600;
+}
+
+.result-message {
+  margin-bottom: 10%;
+}
+
+.retake-btn {
+  width: 80%;
+  margin: auto auto 5%;
+  background-color: rgba(104, 134, 140, 0.4);
+  color: #34222e;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0px;
+  font-size: 1.5rem;
+  box-shadow: 0 3px rgba(64, 85, 89, 0.6);
+  text-align: center;
 }
 
 
@@ -127,5 +168,20 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+
+  .submit-btn {
+    width: 100%;
+    margin: 0;
+  }
+
+  .retake-btn {
+    width: auto;
   }
 }
