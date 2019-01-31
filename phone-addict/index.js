@@ -24,14 +24,6 @@ quizForm.addEventListener("submit", function (event) {
   const finalMessage = selectResultMessage(totalScore, numOfQuestions);
   finalMessage.classList.toggle("hidden");
   finalMessage.classList.toggle("animate-fadein");
-
-
-  // Find the retake button and add its functionality (refresh, scroll to top) - this doesn't work yet...
-
-  document.querySelector(".retake-btn").addEventListener("click", function(){
-    location.reload();
-    window.scrollTo(0,0);
-  });
 });
 
 
@@ -71,4 +63,16 @@ function selectResultMessage(score, numberOfQuestions) {
   } else {
     return document.querySelector("#result-3");
   }
+}
+
+
+// Add functionality (refresh, scroll to top) to each retake button
+
+const retakeBtnElArray = document.querySelectorAll(".retake-btn");
+
+for (let x = 0; x < retakeBtnElArray.length; x++) {
+  retakeBtnElArray[x].addEventListener("click", function () {
+    location.reload();
+    window.scrollTo(0, 0);
+  });
 }
