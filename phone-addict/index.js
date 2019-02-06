@@ -15,8 +15,9 @@ quizForm.addEventListener("submit", function (event) {
     totalScore += scoreQuestion(currentQuestion);
   }
 
-  //Hide the header, form content, and form container; show the result message
+  //Hide the header, form content, and form container; scroll to top and show the result message
 
+  window.scrollTo(0, 0);
   document.querySelector("header").classList.toggle("hidden");
   document.querySelector(".main-content").classList.toggle("hidden");
   this.classList.toggle("hidden");
